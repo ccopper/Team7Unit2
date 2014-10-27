@@ -12,7 +12,18 @@ class AddPetsAndPettypes extends Migration {
 	 */
 	public function up()
 	{
-		
+		Schema::create('pets', function($table)
+		{
+			$table->increments('id');
+			$table->string('Name');
+			$table->integer('Age');
+			$table->integer('Pettype_id');
+		});
+		Schema::create('pettypes', function($table)
+		{
+			$table->increments('id');
+			$table->string('Name');
+		});
 	}
 
 	/**
