@@ -6,7 +6,7 @@ class Pet extends Eloquent
 	
 	public function Pettype()
 	{
-		return $this->belongsTo('Pettype', 'id);
+		return $this->belongsTo('Pettype', 'id');
 	}
 }
 

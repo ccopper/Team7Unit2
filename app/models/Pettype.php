@@ -1,6 +1,6 @@
 <?php
 
-class Pet extends Eloquent
+class Pettype extends Eloquent
 {
 	protected $fillable = array('Name','Age', 'Petype_id');
 	

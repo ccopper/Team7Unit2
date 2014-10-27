@@ -13,5 +13,6 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	$pets = Pet::all();
+	return View::make('index')->with('pets', $pets);
 });
