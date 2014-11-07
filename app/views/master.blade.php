@@ -17,12 +17,16 @@
 	<body>
 		<div class="container">
 			<div class="page-header">
-				<h2>Pet Shop</h2>
+				<h2>Pet Shop <small>Adopt a pet</small></h2>
 				@yield('header')
 			</div>
 			<div class="content">
 				@yield('content')
 			</div>
+			<a href="{{URL::to('/')}}">Show All Pets</a><br>
+			<a href="{{URL::to('/dogs')}}">Show only Dogs</a><br>
+			<a href="{{URL::to('/orderby')}}">Order by age</a><br>
+			
 			<div style="width:100%; text-align:center">
 				Thanks for visiting!
 			</div>

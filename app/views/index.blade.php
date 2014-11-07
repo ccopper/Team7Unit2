@@ -5,10 +5,14 @@
 	</h2>
 @stop
 @section('content')
+	<ul>
 	@foreach($pets as $pet)
-	
-		{{$pet}}
-		{{$pet->Pettype->Name}}
-		<br>
+		<li>{{{ $pet->name }}} 
+		- {{{ $pet->age }}} 
+		- {{{ $pet->pettype->name }}}
+		</li>
 	@endforeach
+	</ul>
+	{{{ $count }}} pets found.
+	
 @stop

@@ -2,12 +2,12 @@
 
 class Pettype extends Eloquent
 {
-	protected $fillable = array('Name','Age', 'Petype_id');
+
 	
 	public $timestamps = false;
-	public function Quotes()
+	public function pets()
 	{
-		return $this->hasMany('Quotes');
+		return $this->hasMany('Pet');
 	}
 }
 

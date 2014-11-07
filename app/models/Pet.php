@@ -2,11 +2,10 @@
 
 class Pet extends Eloquent
 {
-	protected $fillable = array('Name','Age', 'Petype_id');
-	
-	public function Pettype()
+	protected $fillable = array('name', 'age', 'pettype_id');
+	public function pettype()
 	{
-		return $this->belongsTo('Pettype', 'id');
+		return $this->belongsTo('Pettype');
 	}
 }
 

@@ -14,5 +14,21 @@
 Route::get('/', function()
 {
 	$pets = Pet::all();
-	return View::make('index')->with('pets', $pets);
+	return View::make('index')->with('pets', $pets)->with('count', $pets->count());
 });
+Route::get('/pets', function()
+{
+	$pets = Pet::all();
+	return View::make('index')->with('pets', $pets)->with('count', $pets->count());
+});
+Route::get('/dogs', function()
+{
+	$pets = Pettype::where('name', 'Dog')->first();
+	return View::make('index')->with('pets', $pets->pets)->with('count', $pets->pets->count());
+});
+Route::get('/orderby', function()
+{
+	$pets = Pet::orderBy('Age', 'DESC')->get();
+	return View::make('index')->with('pets', $pets)->with('count', $pets->count());
+});
+
